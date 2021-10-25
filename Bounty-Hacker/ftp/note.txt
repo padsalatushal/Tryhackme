@@ -1,0 +1,31 @@
+Bounty Hacker
+Padsala Trushal
+25 Oct 2021
+10.10.211.148
+
+
+-nmap scan
+	ftp anonymous login allow
+	found two files
+		-tasks.txt ==> user found:lin
+		-locks.txt	==> may be password files
+
+-hydra
+	brute force ssh with lin user and locks.txt password file
+
+	ssh login successful
+		user:lin
+		password:RedDr4gonSynd1cat3
+
+
+	found user flag:THM{CR1M3_SyNd1C4T3}
+
+
+-privileage ex
+	-sudo -l
+	user lin run tar command with root permission
+	gtfobin
+		-sudo tar xf /dev/null -I '/bin/sh -c "sh <&2 1>&2"'
+
+		
+
