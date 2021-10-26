@@ -1,0 +1,42 @@
+tom ghost vernebility
+
+cve 2020-1938
+
+
+
+-nmap 
+	-when we see nmap result we see some basic services like ssh ftp
+	but we also see apache tomcat 9.0.30 is running
+	
+	-after searching in google we know that there is vernebility in this service
+
+	-download exploit and use it
+		 python 48143.py -p 8009 -f /WEB-INF/web.xml 10.10.254.122  
+
+
+
+-found ssh credential
+	-skyfuck:8730281lkjlkjdqlksalks
+
+
+	-found flag in merlin user
+		THM{GhostCat_1s_so_cr4sy}
+
+
+	-found a gpg credetial file and it's key
+	
+	-in order to get data from it we need to creck the key file
+	
+	-gpg2john for creating the hash for john
+	
+	-after that creck the hash using john
+		-alexandru
+
+
+	-let's extract data from gpg file using this password
+		merlin:asuyusdoiuqoilkda312j31k2j123j1g23g12k3g12kj3gk12jg3k12j3kj123j
+
+
+--privilage escation
+	sudo -l
+		THM{Z1P_1S_FAKE}
