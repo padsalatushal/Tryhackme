@@ -1,0 +1,83 @@
+Agent Sudo
+Padsala Trushal
+25 Oct 2021
+10.10.78.38
+
+
+-curl http://10.10.78.38 -A C -L 
+ 	-l allow redirects
+ 		Attention chris, <br><br>
+
+		Do you still remember our deal? Please tell agent J about the stuff ASAP. Also, change your god damn password, is weak! <br><br>
+
+		From,<br>
+		Agent R
+
+-brute force ftp
+	username:chris
+	password:crystal
+	login in ftp
+		-found some file
+			-in tryhackme question it asks for zip file but there is no zip file found in ftp
+			- may be some zip file hidden in this pictures
+
+			let's run binwalk and know which file is hidding zip file
+
+			great we found zip and some z lib data in img(cutie.png)
+			let's extract the data from image with binwalk
+
+
+			-zip file is protected that mean we have to creck password with john(zip2john)
+				password = alien
+					inside zip file
+						Agent C,
+
+						We need to send the picture to 'QXJlYTUx' as soon as possible!
+
+						By,
+						Agent R
+
+						QXJlYTUx == Area51(cyberchef)(base64)
+
+
+			-now we have left only one img file (cute-alien.jpg)
+				-let's see if this file is hidding any data
+					-binkwalk is not showing anything
+					-steghide is showing data but it need password for extract (Area51)
+
+				-found message.txt
+					Hi james,
+
+					Glad you find this message. Your login password is hackerrules!
+
+					Don't ask me why the password look cheesy, ask agent R who set this password for you.
+
+					Your buddy,
+					chris
+
+-ssh login	
+	-user-flag = b03d975e8c92a7c04146cfa7a5a313c7
+	-there is one img file let's download and see 
+		we have to find out this img name
+			after using binwalk steghide let's try google img search
+			Roswell alien autopsy(use hint for it:fox news)
+
+--privilage escation
+
+	-(ALL, !root) /bin/bash exploit
+		sudo -u#-1 /bin/bash == exploit(google)
+		cve-2019-14287
+
+	-root flag 
+		To Mr.hacker,
+
+		Congratulation on rooting this box. This box was designed for TryHackMe. Tips, always update your machine. 
+
+		Your flag is 
+		b53a02f55b57d4439e3341834d70c062
+
+		By,
+		DesKel a.k.a Agent R
+
+
+

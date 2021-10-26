@@ -1,0 +1,7 @@
+Loaded 1 password hash (ZIP, WinZip [PBKDF2-SHA1 256/256 AVX2 8x])
+No password hashes left to crack (see FAQ)
+
+8702.zip/To_agentR.txt:alien:To_agentR.txt:8702.zip:8702.zip
+
+1 password hash cracked, 0 left
+                                  
