@@ -1,0 +1,8 @@
+http://10.10.208.127/.hta                 (Status: 403) [Size: 213]
+http://10.10.208.127/.htaccess            (Status: 403) [Size: 218]
+http://10.10.208.127/.htpasswd            (Status: 403) [Size: 218]
+http://10.10.208.127/0                    (Status: 301) [Size: 0] [--> http://10.10.208.127/0/]
+http://10.10.208.127/admin                (Status: 301) [Size: 235] [--> http://10.10.208.127/admin/]
+http://10.10.208.127/atom                 (Status: 301) [Size: 0] [--> http://10.10.208.127/feed/atom/]
+http://10.10.208.127/audio                (Status: 301) [Size: 235] [--> http://10.10.208.127/audio/]
+http://10.10.208.127/blog                 (Status: 301) [Size: 234] [--> http://10.10.208.127/blog/]

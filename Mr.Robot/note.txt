@@ -1,0 +1,42 @@
+-nmap
+-gobuster
+	found robots.tx
+	admin panel(wp-login)
+
+--found robots.txt in web
+	-2 files(download with wget)
+		-1-of-3-key found
+			073403c8a58a1f80d943455fb30724b9
+		-fsocity.dic
+			we have to use sort and uniq funcanality on this dic file
+
+
+
+--brute force login pase
+	username:elliot
+	password:ER28-0652
+
+
+	login in wordpress dashboard
+	update 403 error php page into reverse shell
+
+	spawning tty shell
+
+--get access
+	-2 file found
+		-password.raw-md5
+			robot:c3fcd3d76192e4007dfb496cca67e13b
+
+
+			creck this hash with crackstation
+				abcdefghijklmnopqrstuvwxyz
+
+	-login with robot user
+		-second flag
+			822c73956184f694993bede3eb39f959
+
+--privilage escation
+	-suid bit
+		gtfo bin
+	-third flag
+		04787ddef27c3dee1ee161b21670b4e4
