@@ -1,0 +1,8 @@
+Hydra v9.1 (c) 2020 by van Hauser/THC & David Maciejak - Please do not use in military or secret service organizations, or for illegal purposes (this is non-binding, these *** ignore laws and ethics anyway).
+
+Hydra (https://github.com/vanhauser-thc/thc-hydra) starting at 2021-10-28 16:21:46
+[DATA] max 16 tasks per 1 server, overall 16 tasks, 14344398 login tries (l:1/p:14344398), ~896525 tries per task
+[DATA] attacking ssh://10.10.112.237:22/
+[STATUS] 145.00 tries/min, 145 tries in 00:01h, 14344261 to do in 1648:46h, 16 active
+[STATUS] 114.67 tries/min, 344 tries in 00:03h, 14344062 to do in 2084:54h, 16 active
+[STATUS] 112.43 tries/min, 787 tries in 00:07h, 14343619 to do in 2126:20h, 16 active

