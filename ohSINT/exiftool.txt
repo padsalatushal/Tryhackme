@@ -1,0 +1,26 @@
+ExifTool Version Number         : 12.32
+File Name                       : WindowsXP.jpg
+Directory                       : .
+File Size                       : 229 KiB
+File Modification Date/Time     : 2021:10:29 01:06:06+05:30
+File Access Date/Time           : 2021:10:29 01:07:29+05:30
+File Inode Change Date/Time     : 2021:10:29 01:06:57+05:30
+File Permissions                : -rw-r--r--
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+XMP Toolkit                     : Image::ExifTool 11.27
+GPS Latitude                    : 54 deg 17' 41.27" N
+GPS Longitude                   : 2 deg 15' 1.33" W
+Copyright                       : OWoodflint
+Image Width                     : 1920
+Image Height                    : 1080
+Encoding Process                : Baseline DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:2:0 (2 2)
+Image Size                      : 1920x1080
+Megapixels                      : 2.1
+GPS Latitude Ref                : North
+GPS Longitude Ref               : West
+GPS Position                    : 54 deg 17' 41.27" N, 2 deg 15' 1.33" W
