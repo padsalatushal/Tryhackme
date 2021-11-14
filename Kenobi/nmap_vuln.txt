@@ -1,0 +1,36 @@
+Starting Nmap 7.92 ( https://nmap.org ) at 2021-11-12 16:20 IST
+Stats: 0:03:59 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.54% done; ETC: 16:24 (0:00:01 remaining)
+Stats: 0:05:31 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.54% done; ETC: 16:25 (0:00:01 remaining)
+Nmap scan report for 10.10.85.59
+Host is up (0.20s latency).
+Not shown: 993 closed tcp ports (conn-refused)
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+80/tcp   open  http
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+| http-enum: 
+|   /admin.html: Possible admin folder
+|_  /robots.txt: Robots file
+111/tcp  open  rpcbind
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+2049/tcp open  nfs
+
+Host script results:
+|_smb-vuln-ms10-054: false
+|_smb-vuln-ms10-061: false
+| smb-vuln-regsvc-dos: 
+|   VULNERABLE:
+|   Service regsvc in Microsoft Windows systems vulnerable to denial of service
+|     State: VULNERABLE
+|       The service regsvc in Microsoft Windows 2000 systems is vulnerable to denial of service caused by a null deference
+|       pointer. This script will crash the service if it is vulnerable. This vulnerability was discovered by Ron Bowes
+|       while working on smb-enum-sessions.
+|_          
+
+Nmap done: 1 IP address (1 host up) scanned in 342.56 seconds

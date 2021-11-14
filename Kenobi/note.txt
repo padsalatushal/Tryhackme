@@ -1,0 +1,36 @@
+Name : Padsala Tushal
+Date : 12/11/2021
+Machine : Kenobi
+
+-nmap
+	-normal scan
+	-vuln scan
+		-samba server is running on 445
+-gobuster
+
+
+-run some custom script scan for samba and proftpd
+	-log.txt
+	-searchsploit some proftpd exploit
+	-copy ssh key with proftpd
+	-mount machine in our attack machine
+	-copy ssh key 
+	-connect with ssh with kenobi user
+
+-privilege escalations
+	- find / -perm -u=s -type f 2>/dev/null
+		-/usr/bin/menu
+
+
+	-strings binery file
+		-found some intressting command
+
+
+
+	-cd /tmp
+	-echo /bin/sh > curl
+	-chmod 777 curl
+	-export PATH=/tmp:PATH
+	-/usr/bin/menu
+	-root flag
+		177b3cd8562289f37382721c28381f02

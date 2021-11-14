@@ -1,0 +1,21 @@
+Starting Nmap 7.91 ( https://nmap.org ) at 2021-11-03 02:04 IST
+Stats: 0:00:02 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 16.73% done; ETC: 02:05 (0:00:10 remaining)
+Stats: 0:00:18 elapsed; 0 hosts completed (1 up), 1 undergoing Connect Scan
+Connect Scan Timing: About 42.30% done; ETC: 02:05 (0:00:25 remaining)
+Stats: 0:01:32 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.30% done; ETC: 02:06 (0:00:00 remaining)
+Stats: 0:01:34 elapsed; 0 hosts completed (1 up), 1 undergoing Script Scan
+NSE Timing: About 99.30% done; ETC: 02:06 (0:00:00 remaining)
+Nmap scan report for 10.10.138.238
+Host is up (0.28s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE  VERSION
+80/tcp open  ssl/http Apache/2.4.18 (Ubuntu)
+| http-robots.txt: 1 disallowed entry 
+|_/fuel/
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Welcome to FUEL CMS
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 100.01 seconds

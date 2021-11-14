@@ -1,0 +1,24 @@
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.10.138.238/
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Expanded:                true
+[+] Timeout:                 10s
+===============================================================
+2021/11/03 02:03:25 Starting gobuster in directory enumeration mode
+===============================================================
+http://10.10.138.238/index                (Status: 200) [Size: 16597]
+http://10.10.138.238/home                 (Status: 200) [Size: 16597]
+http://10.10.138.238/0                    (Status: 200) [Size: 16597]
+http://10.10.138.238/assets               (Status: 301) [Size: 315] [--> http://10.10.138.238/assets/]
+http://10.10.138.238/'                    (Status: 400) [Size: 1134]                                  
+http://10.10.138.238/$FILE                (Status: 400) [Size: 1134]                                  
+http://10.10.138.238/$file                (Status: 400) [Size: 1134]                                  
+http://10.10.138.238/offline              (Status: 200) [Size: 70]                                    
+http://10.10.138.238/*checkout*           (Status: 400) [Size: 1134]                                  
