@@ -1,0 +1,43 @@
+Name : Padsala Tushal
+Date : 12/11/2021
+Machine : Blue
+
+-nmap
+	-normal scan
+	-vuln scan
+		found smb on windows 7
+
+	-search for vulnerability and found rce on smb with nmap vuln scan
+	-ms17-010
+
+-metasploit
+	-search for ms17-010 
+	-set all options and exploit
+	-seem like it need to restart vm let's restart machine
+
+
+-Escalate
+	-convert shell_to_meterpreter
+	-migrate process to system32
+	-hashdump
+	-hash has hash and salt
+	-creckstantion
+		-try to creck sprate hash and salt
+			-hash crecked--alqfna22
+
+
+
+-flags
+	
+	-search -f flag*
+	-shell
+	-type(cat)
+
+	-flag1
+		-c:\flag1.txt = flag{access_the_machine}
+
+	-flag2
+		-c:\Windows\System32\config\flag2.txt = flag{sam_database_elevated_access}
+
+	-flag3
+		-c:\Users\Jon\Documents\flag3.txt = flag{admin_documents_can_be_valuable}
