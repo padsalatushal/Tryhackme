@@ -1,0 +1,12 @@
+# Nmap 7.92 scan initiated Sun Aug 14 10:09:46 2022 as: nmap -vv --reason -Pn -T4 -sV -p 49156 --script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/liveoverflow/Desktop/Ctfs/Tryhackme/steal-mountain/results/10.10.185.79/scans/tcp49156/tcp_49156_rpc_nmap.txt -oX /home/liveoverflow/Desktop/Ctfs/Tryhackme/steal-mountain/results/10.10.185.79/scans/tcp49156/xml/tcp_49156_rpc_nmap.xml 10.10.185.79
+Nmap scan report for 10.10.185.79
+Host is up, received user-set (0.18s latency).
+Scanned at 2022-08-14 10:09:50 IST for 73s
+
+PORT      STATE SERVICE REASON          VERSION
+49156/tcp open  msrpc   syn-ack ttl 124 Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Aug 14 10:11:03 2022 -- 1 IP address (1 host up) scanned in 77.77 seconds

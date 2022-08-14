@@ -1,0 +1,58 @@
+# Nmap 7.92 scan initiated Sun Aug 14 10:09:45 2022 as: nmap -vv --reason -Pn -T4 -sV -p 139 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/liveoverflow/Desktop/Ctfs/Tryhackme/steal-mountain/results/10.10.185.79/scans/tcp139/tcp_139_smb_nmap.txt -oX /home/liveoverflow/Desktop/Ctfs/Tryhackme/steal-mountain/results/10.10.185.79/scans/tcp139/xml/tcp_139_smb_nmap.xml 10.10.185.79
+Nmap scan report for 10.10.185.79
+Host is up, received user-set (0.19s latency).
+Scanned at 2022-08-14 10:09:50 IST for 19s
+
+PORT    STATE SERVICE     REASON          VERSION
+139/tcp open  netbios-ssn syn-ack ttl 124 Microsoft Windows netbios-ssn
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-capabilities: 
+|   2.0.2: 
+|     Distributed File System
+|   2.1: 
+|     Distributed File System
+|     Leasing
+|   3.0: 
+|     Distributed File System
+|     Leasing
+|   3.0.2: 
+|     Distributed File System
+|_    Leasing
+|_smb-print-text: false
+| smb-protocols: 
+|   dialects: 
+|     NT LM 0.12 (SMBv1) [dangerous, but default]
+|     2.0.2
+|     2.1
+|     3.0
+|_    3.0.2
+| nbstat: NetBIOS name: STEELMOUNTAIN, NetBIOS user: <unknown>, NetBIOS MAC: 02:72:0c:dc:fd:ef (unknown)
+| Names:
+|   STEELMOUNTAIN<20>    Flags: <unique><active>
+|   STEELMOUNTAIN<00>    Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+| Statistics:
+|   02 72 0c dc fd ef 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   3.0.2: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2022-08-14T04:39:59
+|_  start_date: 2022-08-14T04:29:54
+|_smb-vuln-ms10-061: No accounts left to try
+| smb-mbenum: 
+|_  ERROR: Failed to connect to browser service: No accounts left to try
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Aug 14 10:10:09 2022 -- 1 IP address (1 host up) scanned in 24.17 seconds

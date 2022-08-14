@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sun Aug 14 10:10:32 2022 as: nmap -vv -&#45;reason -Pn -T4 -sU -sV -p 137 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/liveoverflow/Desktop/Ctfs/Tryhackme/steal-mountain/results/10.10.185.79/scans/udp137/udp_137_smb_nmap.txt -oX /home/liveoverflow/Desktop/Ctfs/Tryhackme/steal-mountain/results/10.10.185.79/scans/udp137/xml/udp_137_smb_nmap.xml 10.10.185.79 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sU -sV -p 137 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/liveoverflow/Desktop/Ctfs/Tryhackme/steal-mountain/results/10.10.185.79/scans/udp137/udp_137_smb_nmap.txt -oX /home/liveoverflow/Desktop/Ctfs/Tryhackme/steal-mountain/results/10.10.185.79/scans/udp137/xml/udp_137_smb_nmap.xml 10.10.185.79" start="1660452032" startstr="Sun Aug 14 10:10:32 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="udp" protocol="udp" numservices="1" services="137"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1660452033"/>
+<taskend task="NSE" time="1660452033"/>
+<taskbegin task="NSE" time="1660452033"/>
+<taskend task="NSE" time="1660452033"/>
+<taskbegin task="NSE" time="1660452033"/>
+<taskend task="NSE" time="1660452033"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1660452033"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1660452033"/>
+<taskbegin task="UDP Scan" time="1660452033"/>
+<taskend task="UDP Scan" time="1660452033" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1660452033"/>
+<taskend task="Service scan" time="1660452033" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1660452033"/>
+<taskend task="NSE" time="1660452034"/>
+<taskbegin task="NSE" time="1660452034"/>
+<taskend task="NSE" time="1660452034"/>
+<taskbegin task="NSE" time="1660452034"/>
+<taskend task="NSE" time="1660452034"/>
+<host starttime="1660452033" endtime="1660452034"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.185.79" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="udp" portid="137"><state state="open" reason="udp-response" reason_ttl="124"/><service name="netbios-ns" product="Microsoft Windows or Samba netbios-ns" extrainfo="workgroup: WORKGROUP" hostname="STEELMOUNTAIN" method="probed" conf="10"/></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: STEELMOUNTAIN, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 02:72:0c:dc:fd:ef (unknown)&#xa;Names:&#xa;  STEELMOUNTAIN&lt;20&gt;    Flags: &lt;unique&gt;&lt;active&gt;&#xa;  STEELMOUNTAIN&lt;00&gt;    Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  02 72 0c dc fd ef 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"/></hostscript><times srtt="303747" rttvar="303747" to="1250000"/>
+</host>
+<taskbegin task="NSE" time="1660452034"/>
+<taskend task="NSE" time="1660452034"/>
+<taskbegin task="NSE" time="1660452034"/>
+<taskend task="NSE" time="1660452034"/>
+<taskbegin task="NSE" time="1660452034"/>
+<taskend task="NSE" time="1660452034"/>
+<runstats><finished time="1660452034" timestr="Sun Aug 14 10:10:34 2022" summary="Nmap done at Sun Aug 14 10:10:34 2022; 1 IP address (1 host up) scanned in 1.69 seconds" elapsed="1.69" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

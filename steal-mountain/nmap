@@ -1,0 +1,90 @@
+Starting Nmap 7.92 ( https://nmap.org ) at 2022-08-14 10:05 IST
+Verbosity Increased to 1.
+Discovered open port 49153/tcp on 10.10.185.79
+Increasing send delay for 10.10.185.79 from 0 to 5 due to 302 out of 1005 dropped probes since last increase.
+Completed SYN Stealth Scan at 10:05, 9.70s elapsed (1000 total ports)
+Initiating Service scan at 10:05
+Scanning 11 services on 10.10.185.79
+Service scan Timing: About 54.55% done; ETC: 10:07 (0:00:48 remaining)
+Completed Service scan at 10:07, 89.92s elapsed (11 services on 1 host)
+NSE: Script scanning 10.10.185.79.
+Initiating NSE at 10:07
+Completed NSE at 10:07, 6.50s elapsed
+Initiating NSE at 10:07
+Completed NSE at 10:07, 0.92s elapsed
+Initiating NSE at 10:07
+Completed NSE at 10:07, 0.00s elapsed
+Nmap scan report for 10.10.185.79
+Host is up (0.22s latency).
+Not shown: 989 closed tcp ports (reset)
+PORT      STATE SERVICE            VERSION
+80/tcp    open  http               Microsoft IIS httpd 8.5
+|_http-server-header: Microsoft-IIS/8.5
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-title: Site doesn't have a title (text/html).
+135/tcp   open  msrpc              Microsoft Windows RPC
+139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds       Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+3389/tcp  open  ssl/ms-wbt-server?
+|_ssl-date: 2022-08-14T04:37:19+00:00; -1s from scanner time.
+| rdp-ntlm-info: 
+|   Target_Name: STEELMOUNTAIN
+|   NetBIOS_Domain_Name: STEELMOUNTAIN
+|   NetBIOS_Computer_Name: STEELMOUNTAIN
+|   DNS_Domain_Name: steelmountain
+|   DNS_Computer_Name: steelmountain
+|   Product_Version: 6.3.9600
+|_  System_Time: 2022-08-14T04:37:14+00:00
+| ssl-cert: Subject: commonName=steelmountain
+| Issuer: commonName=steelmountain
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2022-08-13T04:30:04
+| Not valid after:  2023-02-12T04:30:04
+| MD5:   3d16 8da9 38e6 d8ec 3030 a581 1bdb ada2
+|_SHA-1: 7e84 7bda c242 8c57 739d affc 40c7 6113 803c 8a46
+8080/tcp  open  http               HttpFileServer httpd 2.3
+|_http-server-header: HFS 2.3
+|_http-favicon: Unknown favicon MD5: 759792EDD4EF8E6BC2D1877D27153CB1
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-title: HFS /
+49152/tcp open  msrpc              Microsoft Windows RPC
+49153/tcp open  msrpc              Microsoft Windows RPC
+49154/tcp open  msrpc              Microsoft Windows RPC
+49155/tcp open  msrpc              Microsoft Windows RPC
+49156/tcp open  msrpc              Microsoft Windows RPC
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2022-08-14T04:37:14
+|_  start_date: 2022-08-14T04:29:54
+| smb2-security-mode: 
+|   3.0.2: 
+|_    Message signing enabled but not required
+| nbstat: NetBIOS name: STEELMOUNTAIN, NetBIOS user: <unknown>, NetBIOS MAC: 02:72:0c:dc:fd:ef (unknown)
+| Names:
+|   STEELMOUNTAIN<20>    Flags: <unique><active>
+|   STEELMOUNTAIN<00>    Flags: <unique><active>
+|_  WORKGROUP<00>        Flags: <group><active>
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+
+NSE: Script Post-scanning.
+Initiating NSE at 10:07
+Completed NSE at 10:07, 0.00s elapsed
+Initiating NSE at 10:07
+Completed NSE at 10:07, 0.00s elapsed
+Initiating NSE at 10:07
+Completed NSE at 10:07, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 108.11 seconds
+           Raw packets sent: 1317 (57.924KB) | Rcvd: 2642 (108.946KB)

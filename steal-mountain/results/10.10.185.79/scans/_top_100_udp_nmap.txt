@@ -1,0 +1,68 @@
+# Nmap 7.92 scan initiated Sun Aug 14 10:04:43 2022 as: nmap -vv --reason -Pn -T4 -sU -A --top-ports 100 -oN /home/liveoverflow/Desktop/Ctfs/Tryhackme/steal-mountain/results/10.10.185.79/scans/_top_100_udp_nmap.txt -oX /home/liveoverflow/Desktop/Ctfs/Tryhackme/steal-mountain/results/10.10.185.79/scans/xml/_top_100_udp_nmap.xml 10.10.185.79
+Warning: 10.10.185.79 giving up on port because retransmission cap hit (6).
+Increasing send delay for 10.10.185.79 from 100 to 200 due to 11 out of 11 dropped probes since last increase.
+Increasing send delay for 10.10.185.79 from 200 to 400 due to 11 out of 11 dropped probes since last increase.
+Increasing send delay for 10.10.185.79 from 400 to 800 due to 11 out of 15 dropped probes since last increase.
+Increasing send delay for 10.10.185.79 from 800 to 1000 due to 11 out of 17 dropped probes since last increase.
+Nmap scan report for 10.10.185.79
+Host is up, received user-set (0.21s latency).
+Scanned at 2022-08-14 10:04:44 IST for 348s
+Not shown: 83 closed udp ports (port-unreach)
+PORT      STATE         SERVICE      REASON               VERSION
+111/udp   open|filtered rpcbind      no-response
+135/udp   open|filtered msrpc        no-response
+137/udp   open          netbios-ns   udp-response ttl 124 Microsoft Windows or Samba netbios-ns (workgroup: WORKGROUP)
+| nbns-interfaces: 
+|   hostname: STEELMOUNTAIN
+|   interfaces: 
+|_    10.10.185.79
+138/udp   open|filtered netbios-dgm  no-response
+161/udp   open|filtered snmp         no-response
+500/udp   open|filtered isakmp       no-response
+518/udp   open|filtered ntalk        no-response
+997/udp   open|filtered maitrd       no-response
+1025/udp  open|filtered blackjack    no-response
+1028/udp  open|filtered ms-lsa       no-response
+1719/udp  open|filtered h323gatestat no-response
+2048/udp  open|filtered dls-monitor  no-response
+2049/udp  open|filtered nfs          no-response
+3283/udp  open|filtered netassistant no-response
+4500/udp  open|filtered nat-t-ike    no-response
+49154/udp open|filtered unknown      no-response
+49192/udp open|filtered unknown      no-response
+Device type: general purpose
+Running: Microsoft Windows 10|2008|7|8.1|2012|Longhorn|Vista
+OS CPE: cpe:/o:microsoft:windows_10 cpe:/o:microsoft:windows_server_2008:r2:sp1 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_8.1 cpe:/o:microsoft:windows_2012 cpe:/o:microsoft:windows cpe:/o:microsoft:windows_vista:::business
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.92%E=4%D=8/14%OT=%CT=%CU=7%PV=Y%DS=5%DC=T%G=N%TM=62F87CC0%P=x86_64-pc-linux-gnu)
+SEQ(CI=I%II=I)
+T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)
+T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=80%CD=Z)
+
+Network Distance: 5 hops
+Service Info: Host: STEELMOUNTAIN
+
+Host script results:
+| nbstat: NetBIOS name: STEELMOUNTAIN, NetBIOS user: <unknown>, NetBIOS MAC: 02:72:0c:dc:fd:ef (unknown)
+| Names:
+|   STEELMOUNTAIN<20>    Flags: <unique><active>
+|   STEELMOUNTAIN<00>    Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+| Statistics:
+|   02 72 0c dc fd ef 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+TRACEROUTE (using port 1900/udp)
+HOP RTT       ADDRESS
+1   76.23 ms  10.17.0.1
+2   ... 4
+5   199.86 ms 10.10.185.79
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Aug 14 10:10:32 2022 -- 1 IP address (1 host up) scanned in 349.03 seconds

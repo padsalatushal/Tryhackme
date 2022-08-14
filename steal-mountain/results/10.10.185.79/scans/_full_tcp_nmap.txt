@@ -1,0 +1,131 @@
+# Nmap 7.92 scan initiated Sun Aug 14 10:04:43 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -p- -oN /home/liveoverflow/Desktop/Ctfs/Tryhackme/steal-mountain/results/10.10.185.79/scans/_full_tcp_nmap.txt -oX /home/liveoverflow/Desktop/Ctfs/Tryhackme/steal-mountain/results/10.10.185.79/scans/xml/_full_tcp_nmap.xml 10.10.185.79
+adjust_timeouts2: packet supposedly had rtt of -54919 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -54919 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -801091 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -801091 microseconds.  Ignoring time.
+Nmap scan report for 10.10.185.79
+Host is up, received user-set (0.21s latency).
+Scanned at 2022-08-14 10:04:44 IST for 1015s
+Not shown: 65520 closed tcp ports (reset)
+PORT      STATE SERVICE            REASON          VERSION
+80/tcp    open  http               syn-ack ttl 124 Microsoft IIS httpd 8.5
+|_http-title: Site doesn't have a title (text/html).
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+135/tcp   open  msrpc              syn-ack ttl 124 Microsoft Windows RPC
+139/tcp   open  netbios-ssn        syn-ack ttl 124 Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds       syn-ack ttl 124 Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+3389/tcp  open  ssl/ms-wbt-server? syn-ack ttl 124
+| ssl-cert: Subject: commonName=steelmountain
+| Issuer: commonName=steelmountain
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2022-08-13T04:30:04
+| Not valid after:  2023-02-12T04:30:04
+| MD5:   3d16 8da9 38e6 d8ec 3030 a581 1bdb ada2
+| SHA-1: 7e84 7bda c242 8c57 739d affc 40c7 6113 803c 8a46
+| -----BEGIN CERTIFICATE-----
+| MIIC3jCCAcagAwIBAgIQf9B1eHKPG5FE0M0ETtjw9zANBgkqhkiG9w0BAQUFADAY
+| MRYwFAYDVQQDEw1zdGVlbG1vdW50YWluMB4XDTIyMDgxMzA0MzAwNFoXDTIzMDIx
+| MjA0MzAwNFowGDEWMBQGA1UEAxMNc3RlZWxtb3VudGFpbjCCASIwDQYJKoZIhvcN
+| AQEBBQADggEPADCCAQoCggEBANZ3duOvFSKwxlPJvj7YCKHn6OEprKOY+ryoAtL6
+| tQarw5wlLEdae6R/T0uj7YMk+ndZiRXZbk1WpPmvr+JFTrmS1E82pXpo/ZlHp8SR
+| DgSYyV0AnIQJsG6bJ5pwSnhoh1y0/rpHqdS00LTzXmJ8Tmz7ySUoxK2c5dTg3+oH
+| Ogg06K43lmTidRY6v0xWKZ3HxvCufnMxp8aPL0UpTxvCmHOyHzv4V6Z72VGqxeOI
+| AHRgi3fxSCDhvkNWOtzNCklRhXYzb6D1e6mnIQ+zHKl7MAqjt+6iKpUKRedPRpJH
+| yV3jGR2XYruh8wWX/CG+gDJJ5jbGjXn4sOKfnIev7cJSvTMCAwEAAaMkMCIwEwYD
+| VR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQwMA0GCSqGSIb3DQEBBQUAA4IB
+| AQCU83Lv+o6cOArfJG+lMVlu/Kosd5vBNVfDFcn++aCbNQjXVonCCEgi2784V0Ft
+| +8TBWyW93cnZVhhKs6LmkwFOp3dex6kiwBK6wCoAZAFgMLv4Knto4A4g5Y6ijP+/
+| MaJzfHZGwzmsATsxednEuHq3mdR6eIvJmJZtCZSEX2vAplArQaC1gJLTMyBkgsVM
+| 0Fb8Xcdk6Km5lJCeaE4AvFLw3OGm/sdxEE+LWA1n9Pz9PmU6uqJt8YgdQJNrzFjL
+| GyUJbcJ2NZz8CknOsApgY7Hxi2PtJ8YYQtcs2BSo9Q1IO0/RIP9EAIYGKARhkOGl
+| H2EdFeZiCwr+qkwrBHIYjxiD
+|_-----END CERTIFICATE-----
+| rdp-ntlm-info: 
+|   Target_Name: STEELMOUNTAIN
+|   NetBIOS_Domain_Name: STEELMOUNTAIN
+|   NetBIOS_Computer_Name: STEELMOUNTAIN
+|   DNS_Domain_Name: steelmountain
+|   DNS_Computer_Name: steelmountain
+|   Product_Version: 6.3.9600
+|_  System_Time: 2022-08-14T04:51:27+00:00
+|_ssl-date: 2022-08-14T04:51:39+00:00; 0s from scanner time.
+5985/tcp  open  http               syn-ack ttl 124 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+8080/tcp  open  http               syn-ack ttl 124 HttpFileServer httpd 2.3
+|_http-title: HFS /
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-favicon: Unknown favicon MD5: 759792EDD4EF8E6BC2D1877D27153CB1
+47001/tcp open  http               syn-ack ttl 124 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+49152/tcp open  msrpc              syn-ack ttl 124 Microsoft Windows RPC
+49153/tcp open  msrpc              syn-ack ttl 124 Microsoft Windows RPC
+49154/tcp open  msrpc              syn-ack ttl 124 Microsoft Windows RPC
+49155/tcp open  msrpc              syn-ack ttl 124 Microsoft Windows RPC
+49156/tcp open  msrpc              syn-ack ttl 124 Microsoft Windows RPC
+49169/tcp open  msrpc              syn-ack ttl 124 Microsoft Windows RPC
+49170/tcp open  msrpc              syn-ack ttl 124 Microsoft Windows RPC
+Aggressive OS guesses: Microsoft Windows 7, Windows Server 2012, or Windows 8.1 Update 1 (96%), Microsoft Windows Vista SP1 (96%), Microsoft Windows Server 2012 (95%), Microsoft Windows Server 2012 R2 Update 1 (94%), Microsoft Windows Server 2012 or Server 2012 R2 (94%), Microsoft Windows Server 2012 R2 (94%), Microsoft Windows Server 2008 R2 SP1 (93%), Microsoft Windows Server 2008 SP2 (93%), Microsoft Windows 7 SP0 - SP1, Windows Server 2008 SP1, Windows Server 2008 R2, Windows 8, or Windows 8.1 Update 1 (93%), Microsoft Windows Server 2008 SP1 (93%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.92%E=4%D=8/14%OT=80%CT=1%CU=44217%PV=Y%DS=5%DC=T%G=Y%TM=62F87F5
+OS:C%P=x86_64-pc-linux-gnu)SEQ(SP=FB%GCD=1%ISR=108%TS=7)SEQ(SP=FA%GCD=1%ISR
+OS:=107%CI=RD%TS=7)OPS(O1=M506NW8ST11%O2=M506NW8ST11%O3=M506NW8NNT11%O4=M50
+OS:6NW8ST11%O5=M506NW8ST11%O6=M506ST11)WIN(W1=2000%W2=2000%W3=2000%W4=2000%
+OS:W5=2000%W6=2000)ECN(R=Y%DF=Y%T=80%W=2000%O=M506NW8NNS%CC=Y%Q=)T1(R=Y%DF=
+OS:Y%T=80%S=O%A=S+%F=AS%RD=0%Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q
+OS:=)T3(R=Y%DF=Y%T=80%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%
+OS:A=O%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%
+OS:DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%
+OS:O=%RD=0%Q=)U1(R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD
+OS:=G)IE(R=Y%DFI=N%T=80%CD=Z)
+
+Uptime guess: 0.016 days (since Sun Aug 14 09:59:05 2022)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=250 (Good luck!)
+IP ID Sequence Generation: Busy server or unknown class
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 61451/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 33925/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 58328/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 8921/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-time: 
+|   date: 2022-08-14T04:51:27
+|_  start_date: 2022-08-14T04:29:54
+| nbstat: NetBIOS name: STEELMOUNTAIN, NetBIOS user: <unknown>, NetBIOS MAC: 02:72:0c:dc:fd:ef (unknown)
+| Names:
+|   STEELMOUNTAIN<20>    Flags: <unique><active>
+|   STEELMOUNTAIN<00>    Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+| Statistics:
+|   02 72 0c dc fd ef 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| smb2-security-mode: 
+|   3.0.2: 
+|_    Message signing enabled but not required
+|_clock-skew: mean: 0s, deviation: 0s, median: -1s
+
+TRACEROUTE (using port 1025/tcp)
+HOP RTT       ADDRESS
+1   241.90 ms 10.17.0.1
+2   ... 4
+5   331.84 ms 10.10.185.79
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Aug 14 10:21:40 2022 -- 1 IP address (1 host up) scanned in 1016.74 seconds

@@ -1,0 +1,6 @@
+200      GET       16l       30w      772c http://10.10.185.79/index.html
+200      GET     2632l    16842w   749502c http://10.10.185.79/img/BillHarper.png
+200      GET      149l      813w    39539c http://10.10.185.79/img/logo.png
+200      GET       16l       30w      772c http://10.10.185.79/
+200      GET       16l       30w      772c http://10.10.185.79/Index.html
+301      GET        2l       10w      147c http://10.10.185.79/img => http://10.10.185.79/img/

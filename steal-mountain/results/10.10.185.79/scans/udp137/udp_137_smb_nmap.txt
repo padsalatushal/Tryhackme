@@ -1,0 +1,23 @@
+# Nmap 7.92 scan initiated Sun Aug 14 10:10:32 2022 as: nmap -vv --reason -Pn -T4 -sU -sV -p 137 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/liveoverflow/Desktop/Ctfs/Tryhackme/steal-mountain/results/10.10.185.79/scans/udp137/udp_137_smb_nmap.txt -oX /home/liveoverflow/Desktop/Ctfs/Tryhackme/steal-mountain/results/10.10.185.79/scans/udp137/xml/udp_137_smb_nmap.xml 10.10.185.79
+Nmap scan report for 10.10.185.79
+Host is up, received user-set (0.30s latency).
+Scanned at 2022-08-14 10:10:33 IST for 1s
+
+PORT    STATE SERVICE    REASON               VERSION
+137/udp open  netbios-ns udp-response ttl 124 Microsoft Windows or Samba netbios-ns (workgroup: WORKGROUP)
+Service Info: Host: STEELMOUNTAIN
+
+Host script results:
+| nbstat: NetBIOS name: STEELMOUNTAIN, NetBIOS user: <unknown>, NetBIOS MAC: 02:72:0c:dc:fd:ef (unknown)
+| Names:
+|   STEELMOUNTAIN<20>    Flags: <unique><active>
+|   STEELMOUNTAIN<00>    Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+| Statistics:
+|   02 72 0c dc fd ef 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Aug 14 10:10:34 2022 -- 1 IP address (1 host up) scanned in 1.69 seconds

@@ -1,0 +1,130 @@
+# Nmap 7.92 scan initiated Sun Aug 14 10:09:45 2022 as: nmap -vv --reason -Pn -T4 -sV -p 3389 "--script=banner,(rdp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/liveoverflow/Desktop/Ctfs/Tryhackme/steal-mountain/results/10.10.185.79/scans/tcp3389/tcp_3389_rdp_nmap.txt -oX /home/liveoverflow/Desktop/Ctfs/Tryhackme/steal-mountain/results/10.10.185.79/scans/tcp3389/xml/tcp_3389_rdp_nmap.xml 10.10.185.79
+Nmap scan report for 10.10.185.79
+Host is up, received user-set (0.19s latency).
+Scanned at 2022-08-14 10:09:49 IST for 138s
+
+PORT     STATE SERVICE            REASON          VERSION
+3389/tcp open  ssl/ms-wbt-server? syn-ack ttl 124
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Insecure certificate signature (SHA1), score capped at F
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Insecure certificate signature (SHA1), score capped at F
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - F
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - F
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - F
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Insecure certificate signature (SHA1), score capped at F
+|_  least strength: F
+| ssl-cert: Subject: commonName=steelmountain
+| Issuer: commonName=steelmountain
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2022-08-13T04:30:04
+| Not valid after:  2023-02-12T04:30:04
+| MD5:   3d16 8da9 38e6 d8ec 3030 a581 1bdb ada2
+| SHA-1: 7e84 7bda c242 8c57 739d affc 40c7 6113 803c 8a46
+| -----BEGIN CERTIFICATE-----
+| MIIC3jCCAcagAwIBAgIQf9B1eHKPG5FE0M0ETtjw9zANBgkqhkiG9w0BAQUFADAY
+| MRYwFAYDVQQDEw1zdGVlbG1vdW50YWluMB4XDTIyMDgxMzA0MzAwNFoXDTIzMDIx
+| MjA0MzAwNFowGDEWMBQGA1UEAxMNc3RlZWxtb3VudGFpbjCCASIwDQYJKoZIhvcN
+| AQEBBQADggEPADCCAQoCggEBANZ3duOvFSKwxlPJvj7YCKHn6OEprKOY+ryoAtL6
+| tQarw5wlLEdae6R/T0uj7YMk+ndZiRXZbk1WpPmvr+JFTrmS1E82pXpo/ZlHp8SR
+| DgSYyV0AnIQJsG6bJ5pwSnhoh1y0/rpHqdS00LTzXmJ8Tmz7ySUoxK2c5dTg3+oH
+| Ogg06K43lmTidRY6v0xWKZ3HxvCufnMxp8aPL0UpTxvCmHOyHzv4V6Z72VGqxeOI
+| AHRgi3fxSCDhvkNWOtzNCklRhXYzb6D1e6mnIQ+zHKl7MAqjt+6iKpUKRedPRpJH
+| yV3jGR2XYruh8wWX/CG+gDJJ5jbGjXn4sOKfnIev7cJSvTMCAwEAAaMkMCIwEwYD
+| VR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQwMA0GCSqGSIb3DQEBBQUAA4IB
+| AQCU83Lv+o6cOArfJG+lMVlu/Kosd5vBNVfDFcn++aCbNQjXVonCCEgi2784V0Ft
+| +8TBWyW93cnZVhhKs6LmkwFOp3dex6kiwBK6wCoAZAFgMLv4Knto4A4g5Y6ijP+/
+| MaJzfHZGwzmsATsxednEuHq3mdR6eIvJmJZtCZSEX2vAplArQaC1gJLTMyBkgsVM
+| 0Fb8Xcdk6Km5lJCeaE4AvFLw3OGm/sdxEE+LWA1n9Pz9PmU6uqJt8YgdQJNrzFjL
+| GyUJbcJ2NZz8CknOsApgY7Hxi2PtJ8YYQtcs2BSo9Q1IO0/RIP9EAIYGKARhkOGl
+| H2EdFeZiCwr+qkwrBHIYjxiD
+|_-----END CERTIFICATE-----
+| rdp-ntlm-info: 
+|   Target_Name: STEELMOUNTAIN
+|   NetBIOS_Domain_Name: STEELMOUNTAIN
+|   NetBIOS_Computer_Name: STEELMOUNTAIN
+|   DNS_Domain_Name: steelmountain
+|   DNS_Computer_Name: steelmountain
+|   Product_Version: 6.3.9600
+|_  System_Time: 2022-08-14T04:41:25+00:00
+|_ssl-date: 2022-08-14T04:41:45+00:00; 0s from scanner time.
+| rdp-enum-encryption: 
+|   Security layer
+|     CredSSP (NLA): SUCCESS
+|     CredSSP with Early User Auth: SUCCESS
+|_    RDSTLS: SUCCESS
+| ssl-dh-params: 
+|   VULNERABLE:
+|   Diffie-Hellman Key Exchange Insufficient Group Strength
+|     State: VULNERABLE
+|       Transport Layer Security (TLS) services that use Diffie-Hellman groups
+|       of insufficient strength, especially those using one of a few commonly
+|       shared groups, may be susceptible to passive eavesdropping attacks.
+|     Check results:
+|       WEAK DH GROUP 1
+|             Cipher Suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+|             Modulus Type: Safe prime
+|             Modulus Source: RFC2409/Oakley Group 2
+|             Modulus Length: 1024
+|             Generator Length: 1024
+|             Public Key Length: 1024
+|     References:
+|_      https://weakdh.org
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Aug 14 10:12:07 2022 -- 1 IP address (1 host up) scanned in 142.54 seconds

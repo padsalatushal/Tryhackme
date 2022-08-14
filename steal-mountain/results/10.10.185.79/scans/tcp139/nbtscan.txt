@@ -1,0 +1,15 @@
+Doing NBT name scan for addresses from 10.10.185.79
+
+
+NetBIOS Name Table for Host 10.10.185.79:
+
+Incomplete packet, 155 bytes long.
+Name             Service          Type
+----------------------------------------
+STEELMOUNTAIN    File Server Service
+STEELMOUNTAIN    Workstation Service
+WORKGROUP        Domain Name
+
+Adapter address: 02:72:0c:dc:fd:ef
+----------------------------------------
+

@@ -1,0 +1,32 @@
+Starting enum4linux v0.9.1 ( http://labs.portcullis.co.uk/application/enum4linux/ ) on Sun Aug 14 10:09:45 2022
+
+[34m =========================================( [0m[32mTarget Information[0m[34m )=========================================
+
+[0mTarget ........... 10.10.185.79
+RID Range ........ 500-550,1000-1050
+Username ......... ''
+Password ......... ''
+Known Usernames .. administrator, guest, krbtgt, domain admins, root, bin, none
+
+
+[34m ============================( [0m[32mEnumerating Workgroup/Domain on 10.10.185.79[0m[34m )============================
+
+[0m[33m
+[+] [0m[32mGot domain/workgroup name: WORKGROUP
+
+[0m
+[34m ================================( [0m[32mNbtstat Information for 10.10.185.79[0m[34m )================================
+
+[0mLooking up status of 10.10.185.79
+	STEELMOUNTAIN   <20> -         B <ACTIVE>  File Server Service
+	STEELMOUNTAIN   <00> -         B <ACTIVE>  Workstation Service
+	WORKGROUP       <00> - <GROUP> B <ACTIVE>  Domain/Workgroup Name
+
+	MAC Address = 02-72-0C-DC-FD-EF
+
+[34m ===================================( [0m[32mSession Check on 10.10.185.79[0m[34m )===================================
+
+[0m[33m
+[E] [0m[31mServer doesn't allow session using username '', password ''.  Aborting remainder of tests.
+
+[0m
