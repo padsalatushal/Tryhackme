@@ -1,0 +1,22 @@
+HTTP/1.1 200 OK
+Cache-Control: public,max-age=31536000
+Content-Type: text/plain
+Last-Modified: Sat, 03 Aug 2019 18:05:09 GMT
+Accept-Ranges: bytes
+ETag: "3d1dc2fc254ad51:0"
+Server: Microsoft-IIS/8.5
+X-Powered-By: ASP.NET
+Date: Mon, 15 Aug 2022 06:22:17 GMT
+Content-Length: 303
+
+User-agent: *
+Disallow: /Account/*.*
+Disallow: /search
+Disallow: /search.aspx
+Disallow: /error404.aspx
+Disallow: /archive
+Disallow: /archive.aspx
+
+#Remove the '#' character below and replace example.com with your own website address.
+#sitemap: http://example.com/sitemap.axd
+# WebMatrix 1.0

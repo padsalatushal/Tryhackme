@@ -1,0 +1,90 @@
+# Nmap 7.92 scan initiated Mon Aug 15 11:48:52 2022 as: nmap -vv --reason -Pn -T4 -sV -sC --version-all -A --osscan-guess -oN /home/liveoverflow/Desktop/Ctfs/Tryhackme/HackPark/results/10.10.39.123/scans/_quick_tcp_nmap.txt -oX /home/liveoverflow/Desktop/Ctfs/Tryhackme/HackPark/results/10.10.39.123/scans/xml/_quick_tcp_nmap.xml 10.10.39.123
+Nmap scan report for 10.10.39.123
+Host is up, received user-set (0.20s latency).
+Scanned at 2022-08-15 11:48:53 IST for 204s
+Not shown: 998 filtered tcp ports (no-response)
+PORT     STATE SERVICE            REASON          VERSION
+80/tcp   open  http               syn-ack ttl 124 Microsoft IIS httpd 8.5
+| http-methods: 
+|   Supported Methods: GET HEAD OPTIONS TRACE POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/8.5
+|_http-title: hackpark | hackpark amusements
+| http-robots.txt: 6 disallowed entries 
+| /Account/*.* /search /search.aspx /error404.aspx 
+|_/archive /archive.aspx
+3389/tcp open  ssl/ms-wbt-server? syn-ack ttl 124
+|_ssl-date: 2022-08-15T06:22:16+00:00; -1s from scanner time.
+| ssl-cert: Subject: commonName=hackpark
+| Issuer: commonName=hackpark
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2022-08-14T06:13:14
+| Not valid after:  2023-02-13T06:13:14
+| MD5:   36c8 ce69 5d19 76ff ff6a 8462 d780 1bca
+| SHA-1: 14e3 16cb 0099 1c6a bae1 d676 4208 9fbe 100f 1de4
+| -----BEGIN CERTIFICATE-----
+| MIIC1DCCAbygAwIBAgIQQNDH56uJyZJGf8L/DegjZzANBgkqhkiG9w0BAQUFADAT
+| MREwDwYDVQQDEwhoYWNrcGFyazAeFw0yMjA4MTQwNjEzMTRaFw0yMzAyMTMwNjEz
+| MTRaMBMxETAPBgNVBAMTCGhhY2twYXJrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+| MIIBCgKCAQEAypdRNZpBlhQHN11Jaj6ASaJskWu8sWbCI0eLx7wRPNDHZiQ+J0Hx
+| QpoYb5RIx4OuJmf7XumYNyjys9RyppPSn67lWRSwW/S8igydxtuf4GtecLBn6OQK
+| APteQUDIzvJPLDbO99xSSu7aKvfLnOBthwQU/vbw5LvQdbWWrd6QdR9KPOb10Ehi
+| xV6BHtMJsZAggbyvyE1wmI9JX9MKHfU5U0iyp7sgIB5KuDHwzHXvoMzNiZPi5SGF
+| qFeRKPvxu10byfa/ni+SA2fDSw2flyZ3QCYvkm7vV5hY2Lu+fuj56Z0neYKAQ72P
+| wVA5OaQe36/cueQtSMgQMaxgfA8Z732FAwIDAQABoyQwIjATBgNVHSUEDDAKBggr
+| BgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQEFBQADggEBAJXrCOzJfFnK
+| H6Ead2z0LOH4Lqrujl7jmv4Pvv0N27M7GwYyVpp8VDv7nhSLy7frQrzYl+ZfjuTn
+| usVGNKJnliYTg2HErHVD1R/O7Eb9pfRH3JJxLokmMV31BJ2yWHTw/+RZOm1x2VTE
+| 71PWLfqJzRxQx2b2biE5WB92l4sfhXAgxkyVib/kqv2qv9rYL6/Tk8yAbCPxh5YT
+| Pi/XkRk+sLJ2Kga8H3CL21IzmP5nwcYnRB2MM/8DJto0TArAV7nsPrCzOYH3yUD8
+| zOdt3wW/1dEfYVdTl+0J7qw1m5r250aGdNPix8nfuIioVt0dpmJazKzH52BElXKk
+| sEboqajCUc8=
+|_-----END CERTIFICATE-----
+| rdp-ntlm-info: 
+|   Target_Name: HACKPARK
+|   NetBIOS_Domain_Name: HACKPARK
+|   NetBIOS_Computer_Name: HACKPARK
+|   DNS_Domain_Name: hackpark
+|   DNS_Computer_Name: hackpark
+|   Product_Version: 6.3.9600
+|_  System_Time: 2022-08-15T06:22:13+00:00
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2012 (98%)
+OS CPE: cpe:/o:microsoft:windows_server_2012:r2
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Microsoft Windows Server 2012 R2 (98%), Microsoft Windows Server 2012 (89%), Microsoft Windows Server 2012 or Windows Server 2012 R2 (89%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.92%E=4%D=8/15%OT=80%CT=%CU=%PV=Y%DS=5%DC=T%G=N%TM=62F9E619%P=x86_64-pc-linux-gnu)
+SEQ(SP=107%GCD=1%ISR=108%TI=RD%TS=4)
+OPS(O1=M506NW8ST11%O2=M506NW8ST11%O3=M506NW8NNT11%O4=M506NW8ST11%O5=M506NW8ST11%O6=M506ST11)
+WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)
+ECN(R=Y%DF=Y%TG=80%W=2000%O=M506NW8NNS%CC=Y%Q=)
+T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+U1(R=N)
+IE(R=N)
+
+Uptime guess: 0.007 days (since Mon Aug 15 11:42:17 2022)
+Network Distance: 5 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 0s, deviation: 0s, median: -1s
+
+TRACEROUTE (using port 3389/tcp)
+HOP RTT       ADDRESS
+1   73.65 ms  10.17.0.1
+2   ... 4
+5   193.91 ms 10.10.39.123
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Aug 15 11:52:17 2022 -- 1 IP address (1 host up) scanned in 205.39 seconds

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Mon Aug 15 11:48:52 2022 as: nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/liveoverflow/Desktop/Ctfs/Tryhackme/HackPark/results/10.10.39.123/scans/_full_tcp_nmap.txt -oX /home/liveoverflow/Desktop/Ctfs/Tryhackme/HackPark/results/10.10.39.123/scans/xml/_full_tcp_nmap.xml 10.10.39.123 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -T4 -sV -sC -&#45;version-all -A -&#45;osscan-guess -p- -oN /home/liveoverflow/Desktop/Ctfs/Tryhackme/HackPark/results/10.10.39.123/scans/_full_tcp_nmap.txt -oX /home/liveoverflow/Desktop/Ctfs/Tryhackme/HackPark/results/10.10.39.123/scans/xml/_full_tcp_nmap.xml 10.10.39.123" start="1660544332" startstr="Mon Aug 15 11:48:52 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1660544333"/>
+<taskend task="NSE" time="1660544333"/>
+<taskbegin task="NSE" time="1660544333"/>
+<taskend task="NSE" time="1660544333"/>
+<taskbegin task="NSE" time="1660544333"/>
+<taskend task="NSE" time="1660544333"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1660544333"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1660544333"/>
+<taskbegin task="SYN Stealth Scan" time="1660544333"/>
+<taskprogress task="SYN Stealth Scan" time="1660544364" percent="2.01" remaining="1509" etc="1660545872"/>
+<taskprogress task="SYN Stealth Scan" time="1660544394" percent="10.24" remaining="535" etc="1660544929"/>
+<taskprogress task="SYN Stealth Scan" time="1660544424" percent="22.89" remaining="307" etc="1660544731"/>
+<taskprogress task="SYN Stealth Scan" time="1660544454" percent="35.28" remaining="222" etc="1660544676"/>
+<taskprogress task="SYN Stealth Scan" time="1660544502" percent="41.22" remaining="242" etc="1660544743"/>
+<taskprogress task="SYN Stealth Scan" time="1660544532" percent="42.72" remaining="267" etc="1660544799"/>
+<taskprogress task="SYN Stealth Scan" time="1660544562" percent="48.93" remaining="239" etc="1660544801"/>
+<taskprogress task="SYN Stealth Scan" time="1660544592" percent="60.87" remaining="167" etc="1660544758"/>
+<taskprogress task="SYN Stealth Scan" time="1660544622" percent="75.15" remaining="96" etc="1660544718"/>
+<taskprogress task="SYN Stealth Scan" time="1660544652" percent="82.45" remaining="68" etc="1660544720"/>
+<taskprogress task="SYN Stealth Scan" time="1660544682" percent="88.65" remaining="45" etc="1660544727"/>
+<taskend task="SYN Stealth Scan" time="1660544717" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1660544717"/>
+<taskend task="Service scan" time="1660544994" extrainfo="2 services on 1 host"/>
+<taskbegin task="Traceroute" time="1660545000"/>
+<taskend task="Traceroute" time="1660545003"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1660545003"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1660545003"/>
+<taskbegin task="NSE" time="1660545003"/>
+<taskend task="NSE" time="1660545008"/>
+<taskbegin task="NSE" time="1660545008"/>
+<taskend task="NSE" time="1660545009"/>
+<taskbegin task="NSE" time="1660545009"/>
+<taskend task="NSE" time="1660545009"/>
+<host starttime="1660544333" endtime="1660545009"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.39.123" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-response" count="65533" proto="tcp" ports="1-79,81-3388,3390-65535"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="http" product="Microsoft IIS httpd" version="8.5" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:internet_information_server:8.5</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-robots.txt" output="6 disallowed entries &#xa;/Account/*.* /search /search.aspx /error404.aspx &#xa;/archive /archive.aspx"/><script id="http-server-header" output="Microsoft-IIS/8.5"><elem>Microsoft-IIS/8.5</elem>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD OPTIONS TRACE POST&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+<elem>POST</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-title" output="hackpark | hackpark amusements"><elem key="title">&#xd;&#xa;&#x9;hackpark | hackpark amusements&#xd;&#xa;</elem>
+</script></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="124"/><service name="ms-wbt-server" tunnel="ssl" method="table" conf="3"/><script id="ssl-date" output="2022-08-15T06:30:07+00:00; -1s from scanner time."><elem key="delta">-1.0</elem>
+<elem key="date">2022-08-15T06:30:07+00:00</elem>
+</script><script id="ssl-cert" output="Subject: commonName=hackpark&#xa;Issuer: commonName=hackpark&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha1WithRSAEncryption&#xa;Not valid before: 2022-08-14T06:13:14&#xa;Not valid after:  2023-02-13T06:13:14&#xa;MD5:   36c8 ce69 5d19 76ff ff6a 8462 d780 1bca&#xa;SHA-1: 14e3 16cb 0099 1c6a bae1 d676 4208 9fbe 100f 1de4&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC1DCCAbygAwIBAgIQQNDH56uJyZJGf8L/DegjZzANBgkqhkiG9w0BAQUFADAT&#xa;MREwDwYDVQQDEwhoYWNrcGFyazAeFw0yMjA4MTQwNjEzMTRaFw0yMzAyMTMwNjEz&#xa;MTRaMBMxETAPBgNVBAMTCGhhY2twYXJrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAypdRNZpBlhQHN11Jaj6ASaJskWu8sWbCI0eLx7wRPNDHZiQ+J0Hx&#xa;QpoYb5RIx4OuJmf7XumYNyjys9RyppPSn67lWRSwW/S8igydxtuf4GtecLBn6OQK&#xa;APteQUDIzvJPLDbO99xSSu7aKvfLnOBthwQU/vbw5LvQdbWWrd6QdR9KPOb10Ehi&#xa;xV6BHtMJsZAggbyvyE1wmI9JX9MKHfU5U0iyp7sgIB5KuDHwzHXvoMzNiZPi5SGF&#xa;qFeRKPvxu10byfa/ni+SA2fDSw2flyZ3QCYvkm7vV5hY2Lu+fuj56Z0neYKAQ72P&#xa;wVA5OaQe36/cueQtSMgQMaxgfA8Z732FAwIDAQABoyQwIjATBgNVHSUEDDAKBggr&#xa;BgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQEFBQADggEBAJXrCOzJfFnK&#xa;H6Ead2z0LOH4Lqrujl7jmv4Pvv0N27M7GwYyVpp8VDv7nhSLy7frQrzYl+ZfjuTn&#xa;usVGNKJnliYTg2HErHVD1R/O7Eb9pfRH3JJxLokmMV31BJ2yWHTw/+RZOm1x2VTE&#xa;71PWLfqJzRxQx2b2biE5WB92l4sfhXAgxkyVib/kqv2qv9rYL6/Tk8yAbCPxh5YT&#xa;Pi/XkRk+sLJ2Kga8H3CL21IzmP5nwcYnRB2MM/8DJto0TArAV7nsPrCzOYH3yUD8&#xa;zOdt3wW/1dEfYVdTl+0J7qw1m5r250aGdNPix8nfuIioVt0dpmJazKzH52BElXKk&#xa;sEboqajCUc8=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">hackpark</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">hackpark</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="modulus">CA9751359A41961407375D496A3E8049A26C916BBCB166C223478BC7BC113CD0C766243E2741F1429A186F9448C783AE2667FB5EE9983728F2B3D472A693D29FAEE55914B05BF4BC8A0C9DC6DB9FE06B5E70B067E8E40A00FB5E4140C8CEF24F2C36CEF7DC524AEEDA2AF7CB9CE06D870414FEF6F0E4BBD075B596ADDE90751F4A3CE6F5D04862C55E811ED309B1902081BCAFC84D70988F495FD30A1DF5395348B2A7BB20201E4AB831F0CC75EFA0CCCD8993E2E52185A8579128FBF1BB5D1BC9F6BF9E2F920367C34B0D9F97267740262F926EEF579858D8BBBE7EE8F9E99D2779828043BD8FC1503939A41EDFAFDCB9E42D48C81031AC607C0F19EF7D8503</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Extended Key Usage</elem>
+<elem key="value">TLS Web Server Authentication</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Key Encipherment, Data Encipherment</elem>
+</table>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2022-08-14T06:13:14</elem>
+<elem key="notAfter">2023-02-13T06:13:14</elem>
+</table>
+<elem key="md5">36c8ce695d1976ffff6a8462d7801bca</elem>
+<elem key="sha1">14e316cb00991c6abae1d67642089fbe100f1de4</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIC1DCCAbygAwIBAgIQQNDH56uJyZJGf8L/DegjZzANBgkqhkiG9w0BAQUFADAT&#xa;MREwDwYDVQQDEwhoYWNrcGFyazAeFw0yMjA4MTQwNjEzMTRaFw0yMzAyMTMwNjEz&#xa;MTRaMBMxETAPBgNVBAMTCGhhY2twYXJrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A&#xa;MIIBCgKCAQEAypdRNZpBlhQHN11Jaj6ASaJskWu8sWbCI0eLx7wRPNDHZiQ+J0Hx&#xa;QpoYb5RIx4OuJmf7XumYNyjys9RyppPSn67lWRSwW/S8igydxtuf4GtecLBn6OQK&#xa;APteQUDIzvJPLDbO99xSSu7aKvfLnOBthwQU/vbw5LvQdbWWrd6QdR9KPOb10Ehi&#xa;xV6BHtMJsZAggbyvyE1wmI9JX9MKHfU5U0iyp7sgIB5KuDHwzHXvoMzNiZPi5SGF&#xa;qFeRKPvxu10byfa/ni+SA2fDSw2flyZ3QCYvkm7vV5hY2Lu+fuj56Z0neYKAQ72P&#xa;wVA5OaQe36/cueQtSMgQMaxgfA8Z732FAwIDAQABoyQwIjATBgNVHSUEDDAKBggr&#xa;BgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQEFBQADggEBAJXrCOzJfFnK&#xa;H6Ead2z0LOH4Lqrujl7jmv4Pvv0N27M7GwYyVpp8VDv7nhSLy7frQrzYl+ZfjuTn&#xa;usVGNKJnliYTg2HErHVD1R/O7Eb9pfRH3JJxLokmMV31BJ2yWHTw/+RZOm1x2VTE&#xa;71PWLfqJzRxQx2b2biE5WB92l4sfhXAgxkyVib/kqv2qv9rYL6/Tk8yAbCPxh5YT&#xa;Pi/XkRk+sLJ2Kga8H3CL21IzmP5nwcYnRB2MM/8DJto0TArAV7nsPrCzOYH3yUD8&#xa;zOdt3wW/1dEfYVdTl+0J7qw1m5r250aGdNPix8nfuIioVt0dpmJazKzH52BElXKk&#xa;sEboqajCUc8=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="rdp-ntlm-info" output="&#xa;  Target_Name: HACKPARK&#xa;  NetBIOS_Domain_Name: HACKPARK&#xa;  NetBIOS_Computer_Name: HACKPARK&#xa;  DNS_Domain_Name: hackpark&#xa;  DNS_Computer_Name: hackpark&#xa;  Product_Version: 6.3.9600&#xa;  System_Time: 2022-08-15T06:30:04+00:00"><elem key="Target_Name">HACKPARK</elem>
+<elem key="NetBIOS_Domain_Name">HACKPARK</elem>
+<elem key="NetBIOS_Computer_Name">HACKPARK</elem>
+<elem key="DNS_Domain_Name">hackpark</elem>
+<elem key="DNS_Computer_Name">hackpark</elem>
+<elem key="Product_Version">6.3.9600</elem>
+<elem key="System_Time">2022-08-15T06:30:04+00:00</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osmatch name="Microsoft Windows Server 2012 R2" accuracy="97" line="75839">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="97"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012" accuracy="88" line="75542">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="88"><cpe>cpe:/o:microsoft:windows_server_2012</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2012 or Windows Server 2012 R2" accuracy="88" line="75675">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2012" accuracy="88"><cpe>cpe:/o:microsoft:windows_server_2012:r2</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.92%E=4%D=8/15%OT=80%CT=%CU=%PV=Y%DS=5%DC=T%G=N%TM=62F9E7F1%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=104%GCD=1%ISR=107%TS=7)&#xa;OPS(O1=M506NW8ST11%O2=M506NW8ST11%O3=M506NW8NNT11%O4=M506NW8ST11%O5=M506NW8ST11%O6=M506ST11)&#xa;WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)&#xa;ECN(R=Y%DF=Y%TG=80%W=2000%O=M506NW8NNS%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=N)&#xa;"/>
+</os>
+<uptime seconds="1072" lastboot="Mon Aug 15 11:42:17 2022"/>
+<distance value="5"/>
+<tcpsequence index="260" difficulty="Good luck!" values="8D0E65B6,D0E73E01,28B47F64,1797434B,16884F4E,5148C6F2"/>
+<ipidsequence class="Busy server or unknown class" values="372,393,39C,3BD,3C6,3DF"/>
+<tcptssequence class="100HZ" values="19EAE,19EB5,19EBF,19EC9,19ED3,19EDD"/>
+<hostscript><script id="clock-skew" output="mean: 0s, deviation: 0s, median: -1s"><elem key="count">2</elem>
+<elem key="stddev">0</elem>
+<elem key="mean">0</elem>
+<elem key="median">-1</elem>
+</script></hostscript><trace port="80" proto="tcp">
+<hop ttl="1" ipaddr="10.17.0.1" rtt="66.85"/>
+<hop ttl="5" ipaddr="10.10.39.123" rtt="190.03"/>
+</trace>
+<times srtt="198020" rttvar="16819" to="265296"/>
+</host>
+<taskbegin task="NSE" time="1660545009"/>
+<taskend task="NSE" time="1660545009"/>
+<taskbegin task="NSE" time="1660545009"/>
+<taskend task="NSE" time="1660545009"/>
+<taskbegin task="NSE" time="1660545009"/>
+<taskend task="NSE" time="1660545009"/>
+<runstats><finished time="1660545009" timestr="Mon Aug 15 12:00:09 2022" summary="Nmap done at Mon Aug 15 12:00:09 2022; 1 IP address (1 host up) scanned in 677.03 seconds" elapsed="677.03" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

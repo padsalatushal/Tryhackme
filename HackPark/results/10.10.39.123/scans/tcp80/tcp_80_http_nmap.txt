@@ -1,0 +1,1064 @@
+# Nmap 7.92 scan initiated Mon Aug 15 11:52:17 2022 as: nmap -vv --reason -Pn -T4 -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/liveoverflow/Desktop/Ctfs/Tryhackme/HackPark/results/10.10.39.123/scans/tcp80/tcp_80_http_nmap.txt -oX /home/liveoverflow/Desktop/Ctfs/Tryhackme/HackPark/results/10.10.39.123/scans/tcp80/xml/tcp_80_http_nmap.xml 10.10.39.123
+Nmap scan report for 10.10.39.123
+Host is up, received user-set (0.20s latency).
+Scanned at 2022-08-15 11:52:18 IST for 642s
+
+PORT   STATE SERVICE REASON          VERSION
+80/tcp open  http    syn-ack ttl 124 Microsoft IIS httpd 8.5
+| http-waf-detect: IDS/IPS/WAF detected:
+|_10.10.39.123:80/?p4yl04d3=<script>alert(document.cookie)</script>
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+|_http-malware-host: Host appears to be clean
+| http-php-version: Logo query returned unknown hash 556cc554e1574ed74b694c857b18fc78
+|_Credits query returned unknown hash 7dfd57557c83e20527e0c9683ce76c8f
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-chrono: Request times for /; avg: 828.59ms; min: 731.29ms; max: 933.63ms
+| http-grep: 
+|   (1) http://10.10.39.123:80/: 
+|     (1) ip: 
+|_      + 10.10.39.123
+| http-robots.txt: 6 disallowed entries 
+| /Account/*.* /search /search.aspx /error404.aspx 
+|_/archive /archive.aspx
+| http-vhosts: 
+|_128 names had status 200
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+|_http-devframework: ASP.NET detected. Found related header.
+| http-headers: 
+|   Cache-Control: private
+|   Content-Length: 10256
+|   Content-Type: text/html; charset=utf-8
+|   Server: Microsoft-IIS/8.5
+|   Content-Style-Type: text/css
+|   Content-Script-Type: text/javascript
+|   X-Powered-By: ASP.NET
+|   Date: Mon, 15 Aug 2022 06:22:29 GMT
+|   Connection: close
+|   
+|_  (Request type: HEAD)
+|_http-mobileversion-checker: No mobile version detected.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+|_http-errors: ERROR: Script execution failed (use -d to debug)
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-date: Mon, 15 Aug 2022 06:22:30 GMT; -1s from local time.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-methods: 
+|   Supported Methods: GET HEAD OPTIONS TRACE POST
+|_  Potentially risky methods: TRACE
+|_http-config-backup: ERROR: Script execution failed (use -d to debug)
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+| http-enum: 
+|   /calendar/cal_search.php: ExtCalendar
+|   /robots.txt: Robots file
+|   /calendar/cal_cat.php: Calendarix
+|   /archive/: Potentially interesting folder
+|   /archives/: Potentially interesting folder
+|   /author/: Potentially interesting folder
+|   /contact/: Potentially interesting folder
+|   /contacts/: Potentially interesting folder
+|   /search/: Potentially interesting folder
+|_  /search-ui/: Potentially interesting folder
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+|_http-title: hackpark | hackpark amusements
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.39.123
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://10.10.39.123:80/
+|     Form id: aspnetform
+|     Form action: /
+|     
+|     Path: http://10.10.39.123:80/archive
+|     Form id: aspnetform
+|_    Form action: /archive
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.39.123
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 217
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 344
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 331
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/Scripts/Auto/02-jquery.cookie.js
+|     Line number: 1
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         
+|          */
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 408
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 265
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 185
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 255
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 654
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 411
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 412
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 289
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 308
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 268
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 247
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 25
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 397
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 566
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 355
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 194
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 410
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 146
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 22
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/archive
+|     Line number: 50
+|     Comment: 
+|         <!-- END HEADER -->
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 208
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 562
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 322
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 169
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 176
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 262
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 59
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 277
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 363
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 51
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 450
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 339
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 620
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 597
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/
+|     Line number: 53
+|     Comment: 
+|         
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 395
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 145
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 641
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 393
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 91
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 6
+|     Comment: 
+|         
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 414
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 269
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 170
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 577
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 129
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 202
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 4
+|     Comment: 
+|         
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 168
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 86
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 351
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/archive
+|     Line number: 104
+|     Comment: 
+|         <!-- START FOOTER -->
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 426
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 493
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 655
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         
+|             */
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 369
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 334
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 651
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 630
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 219
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 23
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 346
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 220
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 610
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 603
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 97
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 276
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 448
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 602
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 375
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/archive
+|     Line number: 123
+|     Comment: 
+|         <!-- END FOOTER -->
+|     
+|     Path: http://10.10.39.123:80/Scripts/Auto/02-jquery.cookie.js
+|     Line number: 51
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 345
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 134
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 578
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 267
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 572
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 568
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 446
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 392
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/archive
+|     Line number: 35
+|     Comment: 
+|         <!-- START HEADER -->
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 347
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 551
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 532
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 69
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 200
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 155
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 406
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 528
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 526
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 524
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 154
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 223
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 153
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 123
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 192
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 19
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 386
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 497
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 496
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 161
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 459
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 460
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 447
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 297
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 445
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 195
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 565
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 222
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 335
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 266
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 328
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 436
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 18
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 302
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 390
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 413
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 409
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 361
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 147
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 338
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 37
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 398
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 394
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 391
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 389
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 193
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 280
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 15
+|     Comment: 
+|         
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 388
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 336
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 379
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 449
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 587
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 434
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 133
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 221
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 184
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/
+|     Line number: 41
+|     Comment: 
+|         
+|         
+|     
+|     Path: http://10.10.39.123:80/archive
+|     Line number: 53
+|     Comment: 
+|         <!-- START CONTENT -->
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 402
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 249
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 105
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 615
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 101
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 225
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 337
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 218
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 156
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 306
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 325
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/archive
+|     Line number: 86
+|     Comment: 
+|         <!-- END CONTENT -->
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 309
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 11
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 281
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 226
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 254
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 171
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 248
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 38
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 201
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 43
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 244
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 162
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 113
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 224
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 517
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 614
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 621
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 122
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 24
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/archive
+|     Line number: 145
+|     Comment: 
+|         <!--- BlogEngine 3.3.6.0 -->
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 58
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 132
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 135
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 435
+|     Comment: 
+|         /* separator */
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 2
+|     Comment: 
+|         
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 498
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 163
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.39.123:80/scripts/syntaxhighlighter/scripts/XRegExp.js
+|     Line number: 377
+|     Comment: 
+|_        
+| http-security-headers: 
+|   Cache_Control: 
+|_    Header: Cache-Control: private
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 2; axd: 1
+|     /Scripts/Auto/
+|       js: 1
+|     /scripts/syntaxhighlighter/scripts/
+|       js: 1
+|     /scripts/syntaxhighlighter/styles/
+|       css: 1
+|   Longest directory structure:
+|     Depth: 3
+|     Dir: /scripts/syntaxhighlighter/styles/
+|   Total files found (by extension):
+|_    Other: 2; axd: 1; css: 1; js: 2
+|_http-server-header: Microsoft-IIS/8.5
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+| http-feed: 
+| Spidering limited to: maxpagecount=40; withinhost=10.10.39.123
+|   Found the following feeds: 
+|     RSS (version 2.0): http://10.10.39.123:80/category/feed/BlogEngineNET
+|     RSS (version 2.0): http://10.10.39.123:80/syndication.axd
+|_    Atom (version 1.0.0.0): http://10.10.39.123:80/syndication.axd?format=atom
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Aug 15 12:03:00 2022 -- 1 IP address (1 host up) scanned in 642.38 seconds

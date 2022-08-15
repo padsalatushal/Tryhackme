@@ -1,0 +1,130 @@
+# Nmap 7.92 scan initiated Mon Aug 15 11:52:17 2022 as: nmap -vv --reason -Pn -T4 -sV -p 3389 "--script=banner,(rdp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/liveoverflow/Desktop/Ctfs/Tryhackme/HackPark/results/10.10.39.123/scans/tcp3389/tcp_3389_rdp_nmap.txt -oX /home/liveoverflow/Desktop/Ctfs/Tryhackme/HackPark/results/10.10.39.123/scans/tcp3389/xml/tcp_3389_rdp_nmap.xml 10.10.39.123
+Nmap scan report for 10.10.39.123
+Host is up, received user-set (0.18s latency).
+Scanned at 2022-08-15 11:52:18 IST for 133s
+
+PORT     STATE SERVICE            REASON          VERSION
+3389/tcp open  ssl/ms-wbt-server? syn-ack ttl 124
+| rdp-enum-encryption: 
+|   Security layer
+|     CredSSP (NLA): SUCCESS
+|     CredSSP with Early User Auth: SUCCESS
+|_    RDSTLS: SUCCESS
+| ssl-cert: Subject: commonName=hackpark
+| Issuer: commonName=hackpark
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2022-08-14T06:13:14
+| Not valid after:  2023-02-13T06:13:14
+| MD5:   36c8 ce69 5d19 76ff ff6a 8462 d780 1bca
+| SHA-1: 14e3 16cb 0099 1c6a bae1 d676 4208 9fbe 100f 1de4
+| -----BEGIN CERTIFICATE-----
+| MIIC1DCCAbygAwIBAgIQQNDH56uJyZJGf8L/DegjZzANBgkqhkiG9w0BAQUFADAT
+| MREwDwYDVQQDEwhoYWNrcGFyazAeFw0yMjA4MTQwNjEzMTRaFw0yMzAyMTMwNjEz
+| MTRaMBMxETAPBgNVBAMTCGhhY2twYXJrMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+| MIIBCgKCAQEAypdRNZpBlhQHN11Jaj6ASaJskWu8sWbCI0eLx7wRPNDHZiQ+J0Hx
+| QpoYb5RIx4OuJmf7XumYNyjys9RyppPSn67lWRSwW/S8igydxtuf4GtecLBn6OQK
+| APteQUDIzvJPLDbO99xSSu7aKvfLnOBthwQU/vbw5LvQdbWWrd6QdR9KPOb10Ehi
+| xV6BHtMJsZAggbyvyE1wmI9JX9MKHfU5U0iyp7sgIB5KuDHwzHXvoMzNiZPi5SGF
+| qFeRKPvxu10byfa/ni+SA2fDSw2flyZ3QCYvkm7vV5hY2Lu+fuj56Z0neYKAQ72P
+| wVA5OaQe36/cueQtSMgQMaxgfA8Z732FAwIDAQABoyQwIjATBgNVHSUEDDAKBggr
+| BgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQEFBQADggEBAJXrCOzJfFnK
+| H6Ead2z0LOH4Lqrujl7jmv4Pvv0N27M7GwYyVpp8VDv7nhSLy7frQrzYl+ZfjuTn
+| usVGNKJnliYTg2HErHVD1R/O7Eb9pfRH3JJxLokmMV31BJ2yWHTw/+RZOm1x2VTE
+| 71PWLfqJzRxQx2b2biE5WB92l4sfhXAgxkyVib/kqv2qv9rYL6/Tk8yAbCPxh5YT
+| Pi/XkRk+sLJ2Kga8H3CL21IzmP5nwcYnRB2MM/8DJto0TArAV7nsPrCzOYH3yUD8
+| zOdt3wW/1dEfYVdTl+0J7qw1m5r250aGdNPix8nfuIioVt0dpmJazKzH52BElXKk
+| sEboqajCUc8=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2022-08-15T06:24:12+00:00; -1s from scanner time.
+| ssl-dh-params: 
+|   VULNERABLE:
+|   Diffie-Hellman Key Exchange Insufficient Group Strength
+|     State: VULNERABLE
+|       Transport Layer Security (TLS) services that use Diffie-Hellman groups
+|       of insufficient strength, especially those using one of a few commonly
+|       shared groups, may be susceptible to passive eavesdropping attacks.
+|     Check results:
+|       WEAK DH GROUP 1
+|             Cipher Suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384
+|             Modulus Type: Safe prime
+|             Modulus Source: RFC2409/Oakley Group 2
+|             Modulus Length: 1024
+|             Generator Length: 1024
+|             Public Key Length: 1024
+|     References:
+|_      https://weakdh.org
+| rdp-ntlm-info: 
+|   Target_Name: HACKPARK
+|   NetBIOS_Domain_Name: HACKPARK
+|   NetBIOS_Computer_Name: HACKPARK
+|   DNS_Domain_Name: hackpark
+|   DNS_Computer_Name: hackpark
+|   Product_Version: 6.3.9600
+|_  System_Time: 2022-08-15T06:23:49+00:00
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Insecure certificate signature (SHA1), score capped at F
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Insecure certificate signature (SHA1), score capped at F
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - F
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - F
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - F
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 2048) - F
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - F
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 2048) - F
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 2048) - F
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 2048) - F
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Insecure certificate signature (SHA1), score capped at F
+|_  least strength: F
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Aug 15 11:54:31 2022 -- 1 IP address (1 host up) scanned in 134.13 seconds

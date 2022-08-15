@@ -1,0 +1,106 @@
+WhatWeb report for http://10.10.39.123:80
+Status    : 200 OK
+Title     : ,hackpark | hackpark amusements
+IP        : 10.10.39.123
+Country   : RESERVED, ZZ
+
+Summary   : ASP_NET, Bootstrap, HTML5, HTTPServer[Microsoft-IIS/8.5], JQuery[1.9.1], Meta-Author[My name], Microsoft-IIS[8.5], OpenSearch[http://10.10.39.123/opensearch.axd], Script[application/ld+json,text/javascript], UncommonHeaders[content-style-type,content-script-type], X-Powered-By[ASP.NET], X-UA-Compatible[IE=edge]
+
+Detected Plugins:
+[ ASP_NET ]
+	ASP.NET is a free web framework that enables great Web
+	applications. Used by millions of developers, it runs some
+	of the biggest sites in the world.
+
+	Google Dorks: (2)
+	Website     : https://www.asp.net/
+
+[ Bootstrap ]
+	Bootstrap is an open source toolkit for developing with
+	HTML, CSS, and JS.
+
+	Website     : https://getbootstrap.com/
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to
+	identify the operating system from the server header.
+
+	String       : Microsoft-IIS/8.5 (from server string)
+
+[ JQuery ]
+	A fast, concise, JavaScript that simplifies how to traverse
+	HTML documents, handle events, perform animations, and add
+	AJAX.
+
+	Version      : 1.9.1
+	Website     : http://jquery.com/
+
+[ Meta-Author ]
+	This plugin retrieves the author name from the meta name
+	tag - info:
+	http://www.webmarketingnow.com/tips/meta-tags-uncovered.html
+	#author
+
+	String       : My name
+
+[ Microsoft-IIS ]
+	Microsoft Internet Information Services (IIS) for Windows
+	Server is a flexible, secure and easy-to-manage Web server
+	for hosting anything on the Web. From media streaming to
+	web application hosting, IIS's scalable and open
+	architecture is ready to handle the most demanding tasks.
+
+	Version      : 8.5
+	Website     : http://www.iis.net/
+
+[ OpenSearch ]
+	This plugin identifies open search and extracts the URL.
+	OpenSearch is a collection of simple formats for the
+	sharing of search results.
+
+	String       : http://10.10.39.123/opensearch.axd
+
+[ Script ]
+	This plugin detects instances of script HTML elements and
+	returns the script language/type.
+
+	String       : application/ld+json,text/javascript
+
+[ UncommonHeaders ]
+	Uncommon HTTP server headers. The blacklist includes all
+	the standard headers and many non standard but common ones.
+	Interesting but fairly common headers should have their own
+	plugins, eg. x-powered-by, server and x-aspnet-version.
+	Info about headers can be found at www.http-stats.com
+
+	String       : content-style-type,content-script-type (from headers)
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header
+
+	String       : ASP.NET (from x-powered-by string)
+
+[ X-UA-Compatible ]
+	This plugin retrieves the X-UA-Compatible value from the
+	HTTP header and meta http-equiv tag. - More Info:
+	http://msdn.microsoft.com/en-us/library/cc817574.aspx
+
+	String       : IE=edge
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Cache-Control: private
+	Content-Type: text/html; charset=utf-8
+	Server: Microsoft-IIS/8.5
+	Content-Style-Type: text/css
+	Content-Script-Type: text/javascript
+	X-Powered-By: ASP.NET
+	Date: Mon, 15 Aug 2022 06:22:19 GMT
+	Connection: close
+	Content-Length: 8983
+
+
